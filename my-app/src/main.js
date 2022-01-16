@@ -2,6 +2,7 @@ import Navigo from "navigo";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ProductPage from "./pages/product";
+import ContactPage from "./pages/contact";
 import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
 import DetailNewsPage from "./pages/detailNews";
@@ -25,6 +26,9 @@ router.on({
     },
     "/product": () => {
         print(ProductPage.render());
+    },
+    "/contact": () => {
+        print(ContactPage.render());
     },
     "/signup": () => {
         print(SignUp.render());
