@@ -1,26 +1,29 @@
 const Header = {
     render() {
         return /* html */`
-        <div class="bg-blue-900 py-3 max-w-5xl mx-auto">
-            <a href="">
-                <img src="https://picsum.photos/180/75" class="mx-auto" alt="">
-            </a>
-        </div>
-        <nav class="max-w-5xl mx-auto bg-orange-600 grid grid-cols-2">
-            <ul class="flex">
-                <li><a href="/" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Trang chủ</a></li>
-                <li><a href="/about" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Thông tin</a></li>
-                <li><a href="/product" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Sản phẩm</a></li>
-                <li><a href="/signup" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Sign up</a></li>
-                <li><a href="/signin" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Sign in</a></li>
-                <li><a href="/admin/dashboard" class="block px-3 py-3 hover:bg-blue-800 hover:text-white hover:underline">Admin</a></li>
+        <div class=" bg-white ">
+        <nav class="2xl:container 2xl:mx-auto sm:py-6 sm:px-7 py-5 px-4">
+            <!-- For large and Medium-sized Screen -->
+            <div class="flex justify-between "> 
+                
+                <div class=" flex space-x-3 items-center">
+                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg5.svg" alt="circle" />                     
+                </div>
+                <ul class="flex float-right content-center">
+                <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
+                <li><a href="/about" class=" px-4 py-5 hover:text-teal-500">Thông tin</a></li>
+                <li><a href="/product" class=" px-4 py-5 hover:text-teal-500">Sản phẩm</a></li>
+                <li><a href="/product" class=" px-4 py-5 hover:text-teal-500">Thương hiệu</a></li>
+                <li><a href="/product" class=" px-4 py-5 hover:text-teal-500">Liên hệ</a></li>
             </ul>
-            <div class="flex px-4 py-3 inline-block pl-5">
-                <input type="text" class="= w-[225px] px-1">
-                <button type="submit" class="border border-current px-4 text-white bg-blue-900 ml-[15px] hover:bg-blue-600">Tìm kiếm</button>
-            </div>
-        </div>
-        </nav>`;
+                <div class="hidden sm:flex flex-row space-x-4">
+                    <a href="/signup"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-indigo-700 bg-white border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center" >Sign Up</button></a>
+                    <a href="/signin"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center" >Sign In</button></a>
+                </div>
+        </nav>    
+    </div>
+            
+        `;
     },
 };
 export default Header;

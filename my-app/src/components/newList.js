@@ -3,7 +3,7 @@ import data from "../data";
 const NewList = {
     render() {
         return /* html */`
-        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Tin tức học tập</h2>            
+        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Danh mục sản phẩm</h2>            
         <div class="grid grid-cols-3 gap-8">
             ${data.map((post) => `
                     <div class="border p-3">
@@ -15,7 +15,7 @@ const NewList = {
                     </div>
             `).join("")}
         </div>
-        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Hoạt động sinh viên</h2>            
+        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Sản phẩm đề xuất</h2>            
         <div class="grid grid-cols-3 gap-8">
             ${data.map((post) => `
                     <div class="border p-3">
