@@ -37,7 +37,7 @@ const Footer = {
         </svg>
             </div>
             <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
-                <a href="/about" class="focus:underline text-black focus:outline-none hover:text-teal-500 text-base cursor-pointer leading-4 ">Thông tin</a>
+                <a href="/about" class="focus:underline text-black focus:outline-none hover:text-teal-500 text-base cursor-pointer leading-4 ">Giới thiệu</a>
                 <a href="/contact" class="focus:underline text-black focus:outline-none hover:text-teal-500 text-base cursor-pointer leading-4 ">Liên hệ</a>
                 <a href="#" class="focus:underline text-black focus:outline-none hover:text-teal-500 text-base cursor-pointer leading-4 ">Điều khoản dịch vụ</a>
                 <a href="#" class="focus:underline text-black focus:outline-none hover:text-teal-500 text-base cursor-pointer leading-4 ">Chính sách bảo mật</a>

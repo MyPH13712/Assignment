@@ -11,19 +11,19 @@ const NavAdmin = {
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <a href="/admin/dashboard" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page">Dashboard</a>
+                    aria-current="page">Thống kê</a>
   
                   <a href="/admin/news"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">News</a>
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Bài viết</a>
   
                   <a href="/admin/products"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sản phẩm</a>
   
                   <a href="/admin/orders"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Order</a>
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Đơn hàng</a>
   
                   <a href="/admin/settings"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Settings</a>
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cài đặt</a>
                 </div>
               </div>
             </div>
@@ -54,13 +54,13 @@ const NavAdmin = {
                     class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block"
                     role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                      id="user-menu-item-0">Your Profile</a>
+                      id="user-menu-item-0">Thông tin của bạn</a>
   
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                      id="user-menu-item-1">Settings</a>
+                      id="user-menu-item-1">Cài đặt</a>
   
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                      id="user-menu-item-2">Sign out</a>
+                      id="user-menu-item-2">Đăng xuất</a>
                   </div>
                 </div>
               </div>
@@ -86,19 +86,19 @@ const NavAdmin = {
         <div class="md:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a href="/admin/dashboard" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-              aria-current="page">Dashboard</a>
+              aria-current="page">Thống kê</a>
   
             <a href="/admin/news"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">News</a>
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Bài viết</a>
   
             <a href="/admin/products"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Products</a>
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sản phẩm</a>
   
             <a href="/admin/orders"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Orders</a>
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Đơn hàng</a>
   
             <a href="/admin/settings"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Settings</a>
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Cài đặt</a>
           </div>
           <div class="pt-4 pb-3 border-t border-gray-700">
             <div class="flex items-center px-5">
@@ -123,15 +123,13 @@ const NavAdmin = {
             </div>
             <div class="mt-3 px-2 space-y-1">
               <a href="#"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your
-                Profile</a>
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Thông tin của bạn</a>
   
               <a href="#"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Settings</a>
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Cài đặt</a>
   
               <a href="#"
-                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Sign
-                out</a>
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Đăng xuất</a>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import ContactPage from "./pages/contact";
 import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
 import DetailNewsPage from "./pages/detailNews";
+import NotFoundPage from "./pages/notfound";
 import DashBoardPage from "./pages/admin/dashboard";
 import AddNewsPage from "./pages/admin/news/add";
 import AdminNewsPage from "./pages/admin/news";
@@ -55,22 +56,5 @@ router.on({
     },
 
 });
+router.notFound(() => print(NotFoundPage));
 router.resolve();
-
-// class KhuonBanh {
-//     constructor(duong, bot) {
-//         this.duong = duong;
-//         this.bot = bot;
-//     }
-
-//     showInfo() {
-//         console.log(`
-//             Luong duong: ${this.duong};
-//             Luong Bot: ${this.bot};
-//         `);
-//     }
-// }
-// const banhDeo = new KhuonBanh(1, 5);
-// const banhNuong = new KhuonBanh(3, 2);
-// banhDeo.showInfo();
-// banhNuong.showInfo();
