@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/notfound";
 import DashBoardPage from "./pages/admin/dashboard";
 import AddNewsPage from "./pages/admin/news/add";
 import AdminNewsPage from "./pages/admin/news";
+import AdminProductPage from "./pages/admin/products";
 import EditNewsPage from "./pages/admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -46,6 +47,9 @@ router.on({
     },
     "/admin/news": () => {
         print(AdminNewsPage.render());
+    },
+    "/admin/products": () => {
+        print(AdminProductPage.render());
     },
     "/admin/news/add": () => {
         print(AddNewsPage.render());

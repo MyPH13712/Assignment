@@ -17,13 +17,7 @@ const NavAdmin = {
                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Bài viết</a>
   
                   <a href="/admin/products"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sản phẩm</a>
-  
-                  <a href="/admin/orders"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Đơn hàng</a>
-  
-                  <a href="/admin/settings"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cài đặt</a>
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sản phẩm</a>  
                 </div>
               </div>
             </div>
@@ -93,12 +87,6 @@ const NavAdmin = {
   
             <a href="/admin/products"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sản phẩm</a>
-  
-            <a href="/admin/orders"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Đơn hàng</a>
-  
-            <a href="/admin/settings"
-              class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Cài đặt</a>
           </div>
           <div class="pt-4 pb-3 border-t border-gray-700">
             <div class="flex items-center px-5">
