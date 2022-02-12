@@ -8,55 +8,55 @@ import SignIn from "./pages/signin";
 import DetailNewsPage from "./pages/detailNews";
 import NotFoundPage from "./pages/notfound";
 import DashBoardPage from "./pages/admin/dashboard";
-import AddNewsPage from "./pages/admin/news/add";
-import AdminNewsPage from "./pages/admin/news";
+import AdminPosts from "./pages/admin/posts";
+import AdminAddPosts from "./pages/admin/posts/add";
+import AdminEditPosts from "./pages/admin/posts/edit";
 import AdminProductPage from "./pages/admin/products";
-import EditNewsPage from "./pages/admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
-    document.getElementById("app").innerHTML = content;
+const print = async (content, id) => {
+    document.getElementById("app").innerHTML = await content.render(id);
+    if (content.afterRender) await content.afterRender(id);
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     "/about": () => {
-        print(AboutPage.render());
+        print(AboutPage);
     },
     "/product": () => {
-        print(ProductPage.render());
+        print(ProductPage);
     },
     "/contact": () => {
-        print(ContactPage.render());
+        print(ContactPage);
     },
     "/signup": () => {
-        print(SignUp.render());
+        print(SignUp);
     },
     "/signin": () => {
-        print(SignIn.render());
+        print(SignIn);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
         print(DetailNewsPage.render(id));
     },
     "/admin/dashboard": () => {
-        print(DashBoardPage.render());
-    },
-    "/admin/news": () => {
-        print(AdminNewsPage.render());
+        print(DashBoardPage);
     },
     "/admin/products": () => {
-        print(AdminProductPage.render());
+        print(AdminProductPage);
     },
-    "/admin/news/add": () => {
-        print(AddNewsPage.render());
+    "/admin/posts": () => {
+        print(AdminPosts);
     },
-    "/admin/news/edit:id": ({ data }) => {
-        const { id } = data;
-        print(EditNewsPage.render(id));
+    "/admin/posts/add": () => {
+        print(AdminAddPosts);
+    },
+    "/admin/posts/:id/edit": ({ data }) => {
+        print(AdminEditPosts, data.id);
     },
 
 });

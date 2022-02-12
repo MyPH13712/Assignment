@@ -1,11 +1,12 @@
-import data from "../data";
+import { getAll } from "../api/posts";
 
 const NewList = {
-    render() {
+    async render() {
+        const response = await getAll();
         return /* html */`
-        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Danh mục sản phẩm</h2>            
+        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Tin tức học tập</h2>            
         <div class="grid grid-cols-3 gap-8">
-            ${data.map((post) => `
+            ${response.data.map((post) => `
                     <div class="border p-3">
                         <a href="/news/${post.id}">
                             <img src="${post.img}" alt="" />
@@ -15,9 +16,9 @@ const NewList = {
                     </div>
             `).join("")}
         </div>
-        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Sản phẩm đề xuất</h2>            
+        <h2 class="font-semibold text-2xl text-sky-800 uppercase my-4">Hoạt động sinh viên</h2>            
         <div class="grid grid-cols-3 gap-8">
-            ${data.map((post) => `
+            ${response.data.map((post) => `
                     <div class="border p-3">
                         <a href="/news/${post.id}">
                             <img src="${post.img}" alt="" />

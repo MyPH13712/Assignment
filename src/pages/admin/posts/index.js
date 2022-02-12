@@ -1,7 +1,10 @@
+import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
+import { getAll } from "../../../api/posts";
 
-const AdminNewsPage = {
-    render() {
+const AdminPosts = {
+    async render() {
+        const response = await getAll();
         return /* html */`
         <div class="min-h-full">
             ${NavAdmin.render()}
@@ -48,18 +51,23 @@ const AdminNewsPage = {
                               </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
+                            ${response.data.map((post, index) => /* html */ `
                               <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                  1
+                                  ${index + 1}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                  <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
+                                  <img src="${post.img}" alt="" width="50"/>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                  <div class="text-sm text-gray-900">${post.title}</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                  <a href="/admin/news/edit:id" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                                  <button class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 mx-4 rounded">Xóa</button>
+                                  <a href="/admin/posts/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
+                                  <button data-id="${post.id}" class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 mx-4 rounded">Xóa</button>
                                 </td>
                               </tr>
+                              `).join("")}
                             </tbody>
                           </table>
                         </div>
@@ -73,5 +81,20 @@ const AdminNewsPage = {
     
                     `;
     },
+    afterRender() {
+        // Lấy danh sách button
+        const btns = document.querySelectorAll(".btn");
+        // tạo vòng lặp và lấy ra từng button
+        btns.forEach((btn) => {
+            const { id } = btn.dataset;
+            // Viết sự kiện khi click vào button call api và xóa sản phẩm
+            btn.addEventListener("click", () => {
+                const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
+                if (confirm) {
+                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`);
+                }
+            });
+        });
+    },
 };
-export default AdminNewsPage;
+export default AdminPosts;
