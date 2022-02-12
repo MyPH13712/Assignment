@@ -3,8 +3,8 @@ import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ProductPage from "./pages/product";
 import ContactPage from "./pages/contact";
-import SignUp from "./pages/signup";
-import SignIn from "./pages/signin";
+import Signup from "./pages/signup";
+import Signin from "./pages/signin";
 import DetailNewsPage from "./pages/detailNews";
 import NotFoundPage from "./pages/notfound";
 import DashBoardPage from "./pages/admin/dashboard";
@@ -34,10 +34,10 @@ router.on({
         print(ContactPage);
     },
     "/signup": () => {
-        print(SignUp);
+        print(Signup);
     },
     "/signin": () => {
-        print(SignIn);
+        print(Signin);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
