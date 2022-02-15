@@ -13,18 +13,18 @@ const Signup = {
             <div class="max-w-md w-full space-y-8">
               <div>
                 <h3 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                  Sign up
+                  Đăng kí
                 </h3>
               </div>
               <form class="mt-8 space-y-6" id="formSignup">
                 <div class="rounded-md shadow-sm -space-y-px">
                   <div>
-                    <label for="email" class="sr-only">Email address</label>
+                    <label for="email" class="sr-only">Email</label>
                     <input id="email" type="email" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
                   </div>
                   <br>
                   <div>
-                    <label for="password" class="sr-only">Password</label>
+                    <label for="password" class="sr-only">Mật khẩu</label>
                     <input id="password" type="password" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
                   </div>       
                 </div>

@@ -7,7 +7,16 @@
       "desc": "ahihihihi"
     }
   ],
-  "users":[
-    
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$jRrxPuV84iicReglyHBz/O.2Y1LWXVsveeBg7gNVCFmjHoDdYc1A6",
+      "id": 1
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "$2a$10$mMTGerHfYWDeAi6hbfYvqugL2.5YGVooPsE4p1KJZuB6zPLzAnngy",
+      "id": 2
+    }
   ]
 }
