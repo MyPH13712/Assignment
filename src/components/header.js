@@ -16,7 +16,7 @@ const Header = {
                 <ul class="flex float-right content-center">
                 <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
                 <li><a href="/about" class=" px-4 py-5 hover:text-teal-500">Giới thiệu</a></li>
-                <li><a href="/product" class=" px-4 py-5 hover:text-teal-500">Sản phẩm</a></li>
+                <li><a href="/products" class=" px-4 py-5 hover:text-teal-500">Sản phẩm</a></li>
                 <li><a href="/admin/dashboard" class=" px-4 py-5 hover:text-teal-500">Thống kê</a></li>
                 ${localStorage.getItem("user") ? `
                     <ul class="flex">

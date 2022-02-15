@@ -1,7 +1,8 @@
 import Navigo from "navigo";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
-import ProductPage from "./pages/product";
+import ProductPage from "./pages/products";
+import ProductDetailPage from "./pages/products/detail";
 import ContactPage from "./pages/contact";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
@@ -39,8 +40,11 @@ router.on({
     "/about": () => {
         print(AboutPage);
     },
-    "/product": () => {
+    "/products": () => {
         print(ProductPage);
+    },
+    "/products/:id": ({ data }) => {
+        print(ProductDetailPage, data.id);
     },
     "/contact": () => {
         print(ContactPage);
