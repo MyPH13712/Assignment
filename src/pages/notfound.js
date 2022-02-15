@@ -1,4 +1,3 @@
-import Banner from "../components/banner";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -7,9 +6,6 @@ const NotFoundPage = {
         return /* html */`
         ${Header.render()}
             <div class="max-w-5xl mx-auto">
-                <section>
-                    ${Banner.render()}
-                </section>
                 <main>
                 <div class="flex items-center justify-center py-12">
                     <div class="bg-white border rounded-md flex items-center justify-center mx-4 md:w-2/3">
