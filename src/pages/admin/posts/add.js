@@ -34,18 +34,18 @@ const AdminAddPosts = {
                           <div class="shadow overflow-hidden sm:rounded-md">
                             <div class="px-4 py-5 bg-white sm:p-6">
                                 <div class="mb-4 ">
-                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Tieu de</label>
+                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Tiêu đề</label>
                                   <input type="text" name="title_post" id="title_post" value="${data.title}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 </div>
                                 <div class="mb-4 ">
-                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Img</label>
+                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Ảnh</label>
                                   <input type="file" name="img_post" id="img_post" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                 </div> 
                                 <div class="mb-4">
                                 <img src="${data.img}">
                                 </div>
                                 <div class="mb-4 ">
-                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Mo ta</label>
+                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Mô tả</label>
                                   <textarea name="desc_post" id="desc_post" cols="30" row="10" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">${data.desc}</textarea>
                                 </div>
                             </div>

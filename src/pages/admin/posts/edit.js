@@ -11,7 +11,7 @@ const AdminEditPosts = {
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold text-gray-900">
-                        Thêm mới tin tức
+                        Sửa tin tức
                     </h1>
                 </div>
             </header>
@@ -27,18 +27,18 @@ const AdminEditPosts = {
                         <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3 ">
-                              <label class="block text-sm font-medium text-gray-700">Tieu de</label>
+                              <label class="block text-sm font-medium text-gray-700">Tiêu đề</label>
                               <input type="text" name="title_post" id="title_post" value="${data.title}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div>
                             <div class="col-span-6 sm:col-span-3 ">
-                              <label class="block text-sm font-medium text-gray-700">Img</label>
+                              <label class="block text-sm font-medium text-gray-700">Ảnh</label>
                               <input type="file" name="img_post" id="img_post" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div> 
                             <div class="col-span-6 sm:col-span-3">
                             <img src="${data.img}">
                             </div>
                             <div class="col-span-6 sm:col-span-3 ">
-                              <label class="block text-sm font-medium text-gray-700">Mo ta</label>
+                              <label class="block text-sm font-medium text-gray-700">Mô tả</label>
                               <textarea name="desc_post" id="desc_post" cols="30" row="10" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">${data.desc}</textarea>
                             </div>
                             </div>
