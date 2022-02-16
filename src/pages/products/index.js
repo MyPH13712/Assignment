@@ -9,60 +9,41 @@ const ProductPage = {
         ${Header.render()}
             
         <div class="max-w-5xl mx-auto">
-        <div class="flex flex-col"> 
-
-            <div class="flex flex-col justify-center">
-                <div class="relative">
-                    <img class="hidden sm:block w-full" src="https://i.ibb.co/HxXSY0j/jason-wang-Nx-Awry-Abt-Iw-unsplash-1-1.png" alt="sofa" />
-                    <img class="sm:hidden w-full" src="https://i.ibb.co/B6qwqPT/jason-wang-Nx-Awry-Abt-Iw-unsplash-1.png" alt="sofa" />
-                    <div class="absolute sm:bottom-8 bottom-4 pr-10 sm:pr-0 left-4 sm:left-8 flex justify-start items-start">
-                        <p class="text-3xl sm:text-4xl font-semibold leading-9 text-white">Range Comfort Sofas</p>
+            
+            <div class="py-6 lg:px-20 md:px-6 px-4">
+                <p class="font-normal text-sm leading-3 text-stone-900 dark:text-stone-500">Home / Shop by Category / Women</p>
+                <hr class="w-full bg-gray-700 my-6" />
+    
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-3 justify-center items-center text-gray-800 dark:text-white">
+                      <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1.svg" alt="toggler">
+                      <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1dark.svg" alt="toggler">
+                        <p class="font-normal text-base leading-4 text-gray-800 dark:text-white">Lọc</p>
                     </div>
                 </div>
-            </div>
-            ${response.data.map((product) => `
-            <div class="mt-10 grid lg:grid-cols-2 gap-x-8 gap-y-8 items-center">
-                <div class="group group-hover:bg-opacity-60 transition duration-500 relative bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 sm:p-28 py-36 px-10 flex justify-center items-center">
-                    <a href="/products/${product.id}">
-                        <img class="group-hover:opacity-60 transition duration-500" src="${product.img}" alt="" />
-                    </a>
-                    <div class="absolute sm:top-8 top-4 left-4 sm:left-8 flex justify-start items-start flex-col space-y-2">
-                        <div>
-                            <h3 class="group-hover:opacity-60 transition duration-500 text-xl leading-5 text-gray-600 dark:text-white"><a href="/products/${product.id}">${product.name}</a></h3>
+    
+                <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 lg:mt-12 mt-10">
+                ${response.data.map((product) => `
+                    <div class="relative">
+                        <div class="relative group">
+                            <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
+                            <a href="/products/${product.id}">
+                            <img class="w-full"  src="${product.img}" alt="" />
+                            </a>
+                            <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
+                                <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Thêm vào giỏ hàng</button>
+                                <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white"><a href="/products/${product.id}">Xem nhanh</a></button>
+                            </div>
                         </div>
-                        <div>
-                            <p class="group-hover:opacity-60 transition duration-500 text-xl font-semibold leading-5 text-gray-800 dark:text-white">${product.price}</p>
-                        </div>
+                        <p class="font-normal dark:text-stone-500 text-xl leading-5 text-stone-900 md:mt-6 mt-4"><a href="/products/${product.id}">${product.name}</a></p>
+                        <p class="font-semibold dark:text-stone-500 text-xl leading-5 text-stone-900 mt-4">${product.price}</p>
                     </div>
-                    
-                    <div class="flex flex-col bottom-8 left-8 space-y-4 absolute opacity-0 group-hover:opacity-100 transition duration-500">
-                        <button>
-                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1.svg" alt="add">
-                            <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg1dark.svg" alt="add">
-                        </button>
-                        <button>
-                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg2.svg" alt="view">
-                            <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg2dark.svg" alt="view">
-                        </button>
-                    </div>
+                
+                    `).join("")}    
                 </div>
-            </div>
-            `).join("")}
-            <div class="flex justify-end items-end mt-12">
-                <div class="flex flex-row items-center justify-center space-x-8">
-                    <button class="text-base leading-none text-gray-800  border-b-2 border-transparent hover:underline ">
-                        <p>1</p>
-                    </button>
-                    <button class="text-base leading-none text-gray-800  border-b-2 border-transparent hover:underline ">
-                        <p>2</p>
-                    </button>
-                    <button class="text-base leading-none text-gray-800  border-b-2 border-transparent hover:underline ">
-                        <p>3</p>
-                    </button>
-                    <button class="flex justify-center items-center">
-                        <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4.svg" alt="next">
-                        <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4dark.svg" alt="next">
-                    </button>
+    
+                <div class="flex justify-center items-center">
+                    <button class="hover:bg-gray-700 dark:text-gray-300 focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 py-5 md:px-16 md:w-auto w-full lg:mt-28 md:mt-12 mt-10 text-white font-medium text-base leading-4">Xem thêm</button>
                 </div>
             </div>
         </div>

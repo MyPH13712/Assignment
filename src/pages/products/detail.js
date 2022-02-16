@@ -1,5 +1,7 @@
+import toastr from "toastr";
 import { get } from "../../api/product";
 import { addToCart } from "../../utils/cart";
+import "toastr/build/toastr.min.css";
 
 const ProductDetailPage = {
     async render(id) {
@@ -67,7 +69,9 @@ const ProductDetailPage = {
             // console.log(inputValue.value)
             const { data } = await get(id);
             console.log(data);
-            addToCart({ ...data, quantity: inputValue.value ? inputValue.value : 1 });
+            addToCart({ ...data, quantity: inputValue.value ? inputValue.value : 1 }, () => {
+                toastr.success(`Thêm sản phẩm ${data.name} vào giỏ hàng thành công!`);
+            });
         });
     },
 };
