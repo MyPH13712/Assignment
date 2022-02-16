@@ -22,30 +22,50 @@
   "products": [
     {
       "id": "23",
-      "name": "ggggggggggg updated 1",
+      "name": "Tàu sân bay Liaoning CV-16",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
+      "product_code": "P056-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "20 x 4.7 x 4.8",
+      "number_plates": "2",
+      "difficult": "5/7",
       "price": "100"
     },
     {
       "id": "24",
-      "name": "ggggggggggg updated 2",
+      "name": "Tàu sân bay USS Enterprise CVN-65",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
+      "product_code": "P083-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "20 x 4.7 x 4.8",
+      "number_plates": "2",
+      "difficult": "5/7",
       "price": "200"
     },
     {
       "id": "25",
-      "name": "ggggggggggg updated 3",
+      "name": "Tàu sân bay Varyag",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
+      "product_code": "P056-KSR",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "20 x 4.7 x 4.8",
+      "number_plates": "2",
+      "difficult": "5/7",
       "price": "300"
     },
     {
       "id": "26",
-      "name": "ggggggggggg updated 4",
+      "name": "Thiết giáp hạm Bismarck",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi",
+      "product_code": "P084-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "20 x 4.7 x 4.8",
+      "number_plates": "2",
+      "difficult": "5/7",
       "price": "400"
     }
   ]

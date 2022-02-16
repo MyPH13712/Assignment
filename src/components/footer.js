@@ -5,28 +5,41 @@ const Footer = {
         <div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12">
         
         <div class="2xl:container 2xl:mx-auto md:py-12 py-3">
-            <div class=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-12 gap-14 lg:px-20 lg:py-5 md:px-12 px-4">
-                <!-- Delivery grid Card -->
-                <div class="">
-                    <img class="" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-1-svg1.svg" alt="delivery">
-                    <h3 class="text-xl leading-5 font-semibold text-black lg:mt-10 mt-8">Giao hàng</h3>
-                    <p class="text-base leading-6 font-normal text-black mt-4 lg:w-full md:w-9/12 w-full">Giao hàng miễn phí cho các đơn đặt hàng trên 50.000 đ</p>
+            
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-24 md:gap-10 gap-12 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+            <!-- Free Shipping Grid Card -->
+            <div class="flex space-x-4">
+                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg1.svg" alt="Free Shipping">
+                <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg1dark.svg" alt="Free Shipping">
+                <div>
+                    <p class="text-xl dark:text-black leading-5 font-semibold text-stone-800">Giao hàng</p>
+                    <p class="text-base leading-6 dark:text-black font-normal text-gray-600 mt-3">Miễn phí giao hàng cho đơn trên 100.00đ</p>
                 </div>
-                <!-- customer Grid Card -->
-                <div class="">
-                    <img class="" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-1-svg2.svg" alt="Customer Care">
-                    <h3 class="text-xl leading-5 font-semibold text-black lg:mt-10 mt-8">Chăm sóc khách hàng</h3>
-                    <p class="text-base leading-6 font-normal text-black mt-4 lg:w-full md:w-9/12 w-full">Dịch vụ chăm sóc khách hàng luôn 24/7 tại  <span class="font-semibold cursor-pointer">+495-589-509</span></p>
-                </div>
-                <!-- MonyBack Guarantee card -->
-                <div class="">
-                    <img class="" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg3.svg" alt="Money Back Guarantee">
-                    <div>
-                        <p class="text-xl leading-5 font-semibold text-black lg:mt-10 mt-8">Hoàn lại tiền</p>
-                        <p class="text-base leading-6 font-normal text-black mt-4 lg:w-full md:w-9/12 w-full">Bạn có thể trả lại sản phẩm trong vòng 14 ngày</p>
-                    </div>
-                </div> 
             </div>
+
+            <!-- Support Grid Card -->
+
+            <div class="flex space-x-4">
+                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg2.svg" alt="Support 24/7">
+                <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg2dark.svg" alt="Support 24/7">
+                <div>
+                    <p class="text-xl dark:text-black leading-5 font-semibold text-gray-800">Hỗ trợ 24/7</p>
+                    <p class="text-base leading-6 dark:text-black font-normal text-gray-600 mt-3">Liên hệ với chúng tôi 24 giờ một ngày tại mydt@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- MonyBack Guarantee card -->
+
+            <div class="flex space-x-4">
+                <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg3.svg" alt="Money Back Guarantee">
+                <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/highlight-4-svg3dark.svg" alt="Money Back Guarantee">
+                <div>
+                    <p class="text-xl dark:text-black leading-5 font-semibold text-gray-800">Hoàn lại tiền</p>
+                    <p class="text-base leading-6 dark:text-black font-normal text-gray-600 mt-3">Bạn có thể trả lại hàng trong 30 ngày</p>
+                </div>
+            </div>
+        </div>
+
         </div>
     
         <div class="flex flex-col items-center justify-center">

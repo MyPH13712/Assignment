@@ -11,14 +11,14 @@ const ProductPage = {
         <div class="max-w-5xl mx-auto">
             
             <div class="py-6 lg:px-20 md:px-6 px-4">
-                <p class="font-normal text-sm leading-3 text-stone-900 dark:text-stone-500">Home / Shop by Category / Women</p>
+               <p class="font-normal text-sm leading-3 text-stone-900 dark:text-black">Trang chủ / Sản phẩm</p>
                 <hr class="w-full bg-gray-700 my-6" />
     
                 <div class="flex justify-between items-center">
-                    <div class="flex space-x-3 justify-center items-center text-gray-800 dark:text-white">
-                      <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1.svg" alt="toggler">
-                      <img class="hidden dark:block" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1dark.svg" alt="toggler">
-                        <p class="font-normal text-base leading-4 text-gray-800 dark:text-white">Lọc</p>
+                    <div class="flex space-x-3 justify-center items-center text-gray-800 dark:text-black">
+                      <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1.svg" alt="toggler">
+                      <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1dark.svg" alt="toggler">
+                        <p class="font-normal text-base leading-4 text-gray-800 dark:text-black"><a href="#">Lọc</a></p>
                     </div>
                 </div>
     
@@ -31,12 +31,11 @@ const ProductPage = {
                             <img class="w-full"  src="${product.img}" alt="" />
                             </a>
                             <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                                <button class="dark:bg-gray-800 dark:text-gray-300 font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Thêm vào giỏ hàng</button>
                                 <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white"><a href="/products/${product.id}">Xem nhanh</a></button>
                             </div>
                         </div>
-                        <p class="font-normal dark:text-stone-500 text-xl leading-5 text-stone-900 md:mt-6 mt-4"><a href="/products/${product.id}">${product.name}</a></p>
-                        <p class="font-semibold dark:text-stone-500 text-xl leading-5 text-stone-900 mt-4">${product.price}</p>
+                        <p class="font-normal dark:text-black text-xl leading-5 text-stone-900 md:mt-6 mt-4"><a href="/products/${product.id}">${product.name}</a></p>
+                        <p class="font-semibold dark:text-black text-xl leading-5 text-stone-900 mt-4">${product.price}</p>
                     </div>
                 
                     `).join("")}    

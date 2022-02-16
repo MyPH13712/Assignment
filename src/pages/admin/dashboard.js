@@ -51,7 +51,6 @@ const DashBoardPage = {
             </div>
             </main>
         </div>
-    
                     `;
     },
 };

@@ -2,11 +2,14 @@ import toastr from "toastr";
 import { get } from "../../api/product";
 import { addToCart } from "../../utils/cart";
 import "toastr/build/toastr.min.css";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const ProductDetailPage = {
     async render(id) {
         const { data: product } = await get(id);
         return /* html */`
+        ${Header.render()}
         <div class="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
             <div class="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
                 <a href="" >
@@ -16,34 +19,35 @@ const ProductDetailPage = {
             </div> 
             <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                 <div class="border-b border-gray-200 pb-6">
-                    <p class="text-sm leading-none text-gray-600 dark:text-gray-300 ">Balenciaga Fall Collection</p>
-                    <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">Balenciaga Signature Sweatshirt</h1>
+                    <p class="text-sm leading-none text-gray-900 dark:text-gray-600 ">Balenciaga Fall Collection</p>
+                    <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-900 dark:text-gray-600 mt-2">${product.name}</h1>
                 </div>
                 <div>
-                    <p class="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7">${product.desc}</p>
-                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 dark:text-white">${product.price}</p>
-                    <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">Product Code: 8BN321AF2IF0NYA</p>
-                    <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Length: 13.2 inches</p>
-                    <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Height: 10 inches</p>
-                    <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">Depth: 5.1 inches</p>
-                    <p class="md:w-96 text-base leading-normal text-gray-600 dark:text-gray-300 mt-4">Composition: 100% calf leather, inside: 100% lamb leather</p>
+                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 dark:text-gray-600">${product.price}</p>
+                    <p class="text-base leading-4 mt-7 text-gray-900 dark:text-gray-600"><span class="font-semibold">Mã sản phẩm:</span> ${product.product_code}</p>
+                    <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Kích thước tấm thép:</span> ${product.steel_size} cm</p>
+                    <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Độ dày tấm thép:</span> ${product.thickness} mm</p>
+                    <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Kích thước sau khi hoàn thiện:</span> ${product.product_size} cm</p>
+                    <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Số tấm thép:</span> ${product.number_plates}</p>
+                    <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Độ khó:</span> ${product.difficult}</p>
                 </div>
                 <div class="lg:mt-11 mt-10">
                     <div class="flex flex-row justify-between">
-                            <p class="font-medium text-base leading-4 text-gray-600 ">Select quantity</p>
+                            <p class="font-medium text-base leading-4 text-gray-600 ">Chọn số lượng</p>
                             <div class="flex">
-                                <input id="inputValue" type="number" class="border dark:text-white border-gray-300 dark:bg-transparent h-full text-center w-14 pb-1" value="1" />
+                                <input id="inputValue" type="number" class="border dark:text-gray-900 border-gray-300 dark:bg-transparent h-full text-center w-14 pb-1" value="1" />
                             </div>
                         </div>
                     </div>
                     <hr class="bg-gray-200 w-full my-2" />
-                    <button data-id="${product.id}" id="btnAddToCart" class="dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
+                    <button data-id="${product.id}" id="btnAddToCart" class="dark:text-gray-400 dark:text-gray-900 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-900 w-full py-4 hover:bg-gray-700 focus:outline-none">
                         Add to cart
                     </button>
                 <div> 
             </div>
         </div>       
      </div>
+     ${Footer.render()}
         `;
     },
 

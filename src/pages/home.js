@@ -13,6 +13,7 @@ const HomePage = {
                 <div class="banner">
                    ${Banner.render()}
                 </div>
+                <br>
                 <div class="news">
                     ${await NewList.render()}
                 </div>

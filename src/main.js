@@ -4,6 +4,7 @@ import AboutPage from "./pages/about";
 import ProductPage from "./pages/products";
 import ProductDetailPage from "./pages/products/detail";
 import ContactPage from "./pages/contact";
+import CartPage from "./pages/cart";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
 import DetailNewsPage from "./pages/detailNews";
@@ -45,6 +46,9 @@ router.on({
     },
     "/products/:id": ({ data }) => {
         print(ProductDetailPage, data.id);
+    },
+    "/cart": () => {
+        print(CartPage);
     },
     "/contact": () => {
         print(ContactPage);
