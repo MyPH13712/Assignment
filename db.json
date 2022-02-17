@@ -17,11 +17,16 @@
       "email": "member@gmail.com",
       "password": "$2a$10$mMTGerHfYWDeAi6hbfYvqugL2.5YGVooPsE4p1KJZuB6zPLzAnngy",
       "id": 2
+    },
+    {
+      "email": "member2@gmail.com",
+      "password": "$2a$10$9T.u3lNccIcCueUTC4P.YOk7qYv6ijEZ72yDwGxbH4N3sxeJZ8/cK",
+      "id": 3
     }
   ],
   "products": [
     {
-      "id": "23",
+      "id": "1",
       "name": "Tàu sân bay Liaoning CV-16",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
       "product_code": "P056-S",
@@ -33,7 +38,7 @@
       "price": "100"
     },
     {
-      "id": "24",
+      "id": "2",
       "name": "Tàu sân bay USS Enterprise CVN-65",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
       "product_code": "P083-S",
@@ -45,7 +50,7 @@
       "price": "200"
     },
     {
-      "id": "25",
+      "id": "3",
       "name": "Tàu sân bay Varyag",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
       "product_code": "P056-KSR",
@@ -57,7 +62,7 @@
       "price": "300"
     },
     {
-      "id": "26",
+      "id": "4",
       "name": "Thiết giáp hạm Bismarck",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
       "product_code": "P084-S",

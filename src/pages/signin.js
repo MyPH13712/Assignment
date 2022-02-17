@@ -19,13 +19,13 @@ const Signin = {
               <form class="mt-8 space-y-6" id="formSignin">
                 <div class="rounded-md shadow-sm -space-y-px">
                   <div>
-                    <label for="email-address" class="sr-only">Email</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                    <label for="email" class="sr-only">Email</label>
+                    <input id="email" name="email" type="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
                   </div>
                   <br>
                   <div>
                     <label for="password" class="sr-only">Mật khẩu</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                    <input id="password" name="password" type="password"  required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
                   </div>
                   <br>
                 </div>
@@ -57,6 +57,9 @@ const Signin = {
                     password: document.querySelector("#password").value,
                 });
                 if (data) {
+                    console.log(data.user);
+                    // Lưu thông tin user vào localStorage
+                    localStorage.setItem("user", JSON.stringify(data.user));
                     toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
                     setTimeout(() => {
                         document.location.href = "/";

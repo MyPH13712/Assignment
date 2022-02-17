@@ -16,8 +16,8 @@ const ProductPage = {
     
                 <div class="flex justify-between items-center">
                     <div class="flex space-x-3 justify-center items-center text-gray-800 dark:text-black">
-                      <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1.svg" alt="toggler">
-                      <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1dark.svg" alt="toggler">
+                      <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1.svg" alt="toggler">
+                      <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-5-svg1dark.svg" alt="toggler">
                         <p class="font-normal text-base leading-4 text-gray-800 dark:text-black"><a href="#">Lọc</a></p>
                     </div>
                 </div>
