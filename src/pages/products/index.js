@@ -30,14 +30,10 @@ const ProductPage = {
                             <a href="/products/${product.id}">
                             <img class="w-full"  src="${product.img}" alt="" />
                             </a>
-                            <div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-                                <button class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white"><a href="/products/${product.id}">Xem nhanh</a></button>
-                            </div>
                         </div>
                         <p class="font-normal dark:text-black text-xl leading-5 text-stone-900 md:mt-6 mt-4"><a href="/products/${product.id}">${product.name}</a></p>
                         <p class="font-semibold dark:text-black text-xl leading-5 text-stone-900 mt-4">${product.price}</p>
                     </div>
-                
                     `).join("")}    
                 </div>
     

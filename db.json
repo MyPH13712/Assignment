@@ -24,6 +24,10 @@
       "id": 3
     }
   ],
+  "cateProducts": [
+    { "id": "1", "name": "Ship"},
+    { "id": "2", "name": "Tank"}
+  ],
   "products": [
     {
       "id": "1",
@@ -35,7 +39,8 @@
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "100"
+      "price": "100",
+      "cateProducts": "1"
     },
     {
       "id": "2",
@@ -47,7 +52,8 @@
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "200"
+      "price": "200",
+      "cateProducts": "1"
     },
     {
       "id": "3",
@@ -59,7 +65,8 @@
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "300"
+      "price": "300",
+      "cateProducts": "1"
     },
     {
       "id": "4",
@@ -71,7 +78,8 @@
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "400"
+      "price": "400",
+      "cateProducts": "1"
     }
   ]
 }

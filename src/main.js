@@ -12,7 +12,9 @@ import NotFoundPage from "./pages/notfound";
 import DashBoardPage from "./pages/admin/dashboard";
 import AdminPosts from "./pages/admin/posts";
 import AdminAddPosts from "./pages/admin/posts/add";
+import AdminAddProduct from "./pages/admin/products/add";
 import AdminEditPosts from "./pages/admin/posts/edit";
+import AdminEditProduct from "./pages/admin/products/edit";
 import AdminProductPage from "./pages/admin/products";
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -30,6 +32,8 @@ router.on("/admin/*", () => {}, {
             } else {
                 document.location.href = "/";
             }
+        } else {
+            document.location.href = "/signin";
         }
     },
 });
@@ -74,6 +78,12 @@ router.on({
     },
     "/admin/posts/add": () => {
         print(AdminAddPosts);
+    },
+    "/admin/products/add": () => {
+        print(AdminAddProduct);
+    },
+    "/admin/products/:id/edit": ({ data }) => {
+        print(AdminEditProduct, data.id);
     },
     "/admin/posts/:id/edit": ({ data }) => {
         print(AdminEditPosts, data.id);

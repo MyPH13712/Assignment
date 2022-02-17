@@ -11,7 +11,7 @@ const Header = {
             <div class="flex justify-between "> 
                 
                 <div class=" flex space-x-3 items-center">
-                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg5.svg" alt="circle" />                     
+                    <h1 class="flex text-4xl font-bold antialiased"><i>Piece3D</i></h1>                     
                 </div>
                 <ul class="flex float-right content-center">
                 <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
@@ -19,13 +19,14 @@ const Header = {
                 <li><a href="/products" class=" px-4 py-5 hover:text-teal-500">Sản phẩm</a></li>
                 <li><a href="/admin/dashboard" class=" px-4 py-5 hover:text-teal-500">Thống kê</a></li>
                 ${localStorage.getItem("user") ? `
-                    <ul class="flex">
-                        <li class="flex items-center">Xin chao <a href="/" class="block mx-3 px-4 py-3 hover:bg-blue-800 hover:text-white" id="email"></a></li>
-                        <li class="flex items-center"><a class="block px-4 py-3 hover:bg-blue-800 hover:text-white" id="logout">Logout</a></li>
+                    <ul class="flex float-right content-center">
+                        <li class="px-4 py-5">Xin chao <a href="/" class="block mx-3 px-4 py-5 hover:bg-blue-800 hover:text-teal-500" id="email"></a></li>
+                        <li class="px-4 py-5 hover:text-teal-500"><a class="block px-4 py-3 hover:bg-blue-800 hover:text-teal-500" id="logout">Logout</a></li>
                     </ul>
                 ` : ""}
             </ul>
                 <div class="hidden sm:flex flex-row space-x-4">
+                
                     <a href="/signup"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-indigo-700 bg-white border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center" >Đăng kí</button></a>
                     <a href="/signin"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center" >Đăng nhập</button></a>
                 </div>

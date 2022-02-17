@@ -19,11 +19,11 @@ const ContactPage = {
                             <div class="w-full md:w-10/12 mt-3">
                                 <div class="mt-4 md:mt-8">
                                     <h2 class="text-sm md:text-base text-indigo-700 font-semibold">Địa chỉ</h2>
-                                    <h2 class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">Office #13, NSTP, NUST University H-12 Sector, Islamabad</h2>
+                                    <h2 class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội</h2>
                                 </div>
                                 <div class="mt-4 md:mt-8">
                                     <h2 class="text-sm md:text-base text-indigo-700 font-semibold">Số điện thoại</h2>
-                                    <h2 class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">+92 051 4567890</h2>
+                                    <h2 class="text-gray-800 text-base md:text-lg leading-8 tracking-wider mt-2">0912345678</h2>
                                 </div>
                                 <div class="mt-4 md:mt-8">
                                     <h2 class="text-sm md:text-base text-indigo-700 font-semibold">Email</h2>

@@ -1,8 +1,8 @@
 import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
-import { edit, get } from "../../../api/posts";
+import { edit, get } from "../../../api/product";
 
-const AdminEditPosts = {
+const AdminEditProduct = {
     async render(id) {
         const { data } = await get(id);
         return /* html */`
@@ -20,7 +20,6 @@ const AdminEditPosts = {
                     <div class="px-4 py-6 sm:px-0">
                     <div class="mt-10 sm:mt-0">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
-                      
                       <div class="mt-5 md:mt-0 md:col-span-2">
                       <form action="#" method="POST">
                       <div class="shadow overflow-hidden sm:rounded-md">
@@ -28,18 +27,17 @@ const AdminEditPosts = {
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3 ">
                               <label class="block text-sm font-medium text-gray-700">Tiêu đề</label>
-                              <input type="text" name="title_post" id="title_post" value="${data.title}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                              <input type="text" name="title_product" id="title_product" value="${data.name}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div>
                             <div class="col-span-6 sm:col-span-3 ">
                               <label class="block text-sm font-medium text-gray-700">Ảnh</label>
-                              <input type="file" name="img_post" id="img_post" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                              <input type="file" name="img_product" id="img_product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div> 
                             <div class="col-span-6 sm:col-span-3">
                             <img src="${data.img}">
                             </div>
                             <div class="col-span-6 sm:col-span-3 ">
                               <label class="block text-sm font-medium text-gray-700">Mô tả</label>
-                              <textarea name="desc_post" id="desc_post" cols="30" row="10" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">${data.desc}</textarea>
                             </div>
                             </div>
                         </div>
@@ -95,8 +93,8 @@ const AdminEditPosts = {
                 desc: document.querySelector("#desc-post").value,
             });
             // chuyển trang
-            document.location.href = "/admin/posts";
+            document.location.href = "/admin/products";
         });
     },
 };
-export default AdminEditPosts;
+export default AdminEditProduct;

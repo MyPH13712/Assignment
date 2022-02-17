@@ -46,7 +46,7 @@ const Footer = {
             <div>
             <svg class="  hover:text-teal-500" width="111" height="19" viewBox="0 0 111 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             
-            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-3-svg5.svg" alt="circle"/>
+            <h1 class="flex text-4xl font-bold antialiased text-black hover:text-teal-500"><i>Piece3D</i></h1>                     
         </svg>
             </div>
             <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">

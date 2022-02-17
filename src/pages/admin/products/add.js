@@ -1,10 +1,10 @@
 import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
-import { add } from "../../../api/posts";
+import { add } from "../../../api/product";
 
-const AdminAddPosts = {
+const AdminAddProduct = {
     async render() {
-        const { data } = await axios.get("https://5e79b4b817314d00161333da.mockapi.io/posts/15");
+        const { data } = await axios.get("https://5e79b4b817314d00161333da.mockapi.io/posts/");
         return /* html */`
         
         <div class="min-h-full">
@@ -12,7 +12,7 @@ const AdminAddPosts = {
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     <h1 class="text-3xl font-bold text-gray-900">
-                        Thêm mới tin tức
+                        Thêm mới sản phẩm
                     </h1>
                 </div>
             </header>
@@ -21,36 +21,28 @@ const AdminAddPosts = {
                     <div class="px-4 py-6 sm:px-0">
                     <div class="mt-10 sm:mt-0">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
-                      <div class="md:col-span-1">
-                        <div class="px-4 sm:px-0">
-                          <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
-                          <p class="mt-1 text-sm text-gray-600">
-                            Use a permanent address where you can receive mail.
-                          </p>
-                        </div>
-                      </div>
                       <div class="mt-5 md:mt-0 md:col-span-2">
                         <form action="#" method="POST">
                           <div class="shadow overflow-hidden sm:rounded-md">
-                            <div class="px-4 py-5 bg-white sm:p-6">
-                                <div class="mb-4 ">
-                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Tiêu đề</label>
-                                  <input type="text" id="title_post" value="${data.title}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                </div>
-                                <div class="mb-4 ">
-                                  <label for="postal-code" class="block text-sm font-medium text-gray-700">Ảnh</label>
-                                  <input type="file" id="img_post" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                </div> 
-                                <div class="mb-4">
-                                <img src="${data.img}">
-                                </div>
-                                <div class="mb-4 ">
-                                  <label  class="block text-sm font-medium text-gray-700">Mô tả</label>
-                                  <textarea  id="desc_post" cols="30" row="10" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">${data.desc}</textarea>
-                                </div>
-                            </div>
+                          <div class="grid grid-cols-6 gap-6">
+                          <div class="col-span-6 sm:col-span-3 ">
+                            <label class="block text-sm font-medium text-gray-700">Tiêu đề</label>
+                            <input type="text" name="title_product" id="title_product" value="${data.name}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          </div>
+                          <div class="col-span-6 sm:col-span-3 ">
+                            <label class="block text-sm font-medium text-gray-700">Ảnh</label>
+                            <input type="file" name="img_product" id="img_product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                          </div> 
+                          <div class="col-span-6 sm:col-span-3">
+                          <img src="${data.img}">
+                          </div>
+                          <div class="col-span-6 sm:col-span-3 ">
+                            <label class="block text-sm font-medium text-gray-700">Mô tả</label>
+                          </div>
+                          </div>
+                      </div>
                             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                              <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 Save
                               </button>
                             </div>
@@ -102,4 +94,4 @@ const AdminAddPosts = {
         });
     },
 };
-export default AdminAddPosts;
+export default AdminAddProduct;
