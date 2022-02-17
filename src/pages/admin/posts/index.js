@@ -51,7 +51,7 @@ const AdminPosts = {
                               </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                            ${response.data.map((post, index) => /* html */ `
+                            ${response.data.map((post, index) => `
                               <tr>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                   ${index + 1}
