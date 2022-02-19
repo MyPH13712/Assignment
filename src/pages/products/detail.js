@@ -22,7 +22,7 @@ const ProductDetailPage = {
                     <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-900 dark:text-gray-600 mt-2">${product.name}</h1>
                 </div>
                 <div>
-                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 dark:text-gray-600">${product.price}</p>
+                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 dark:text-gray-600">${product.price} đ</p>
                     <p class="text-base leading-4 mt-7 text-gray-900 dark:text-gray-600"><span class="font-semibold">Mã sản phẩm:</span> ${product.product_code}</p>
                     <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Kích thước tấm thép:</span> ${product.steel_size} cm</p>
                     <p class="text-base leading-4 mt-4 text-gray-900 dark:text-gray-600"><span class="font-semibold">Độ dày tấm thép:</span> ${product.thickness} mm</p>
