@@ -1,5 +1,8 @@
+import toastr from "toastr";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { reRender } from "../utils";
+import "toastr/build/toastr.min.css";
 
 const AboutPage = {
     render() {
@@ -26,6 +29,22 @@ const AboutPage = {
         </div>
         ${Footer.render()}
         `;
+    },
+    afterRender() {
+        // Lấy thông tin từ localStorage
+        // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
+        const email = document.querySelector("#email");
+        const logout = document.querySelector("#logout");
+        if (email) {
+            email.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                reRender(Header, "#header");
+                toastr.success("Logout thành công");
+            });
+        }
     },
 };
 export default AboutPage;

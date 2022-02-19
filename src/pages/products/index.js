@@ -1,6 +1,9 @@
+import toastr from "toastr";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { getAll } from "../../api/product";
+import { reRender } from "../../utils";
+import "toastr/build/toastr.min.css";
 
 const ProductPage = {
     async render() {
@@ -28,7 +31,7 @@ const ProductPage = {
                         <div class="relative group">
                             <div class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
                             <a href="/products/${product.id}">
-                            <img class="w-full"  src="${product.img}" alt="" />
+                                <img class="w-full" src="${product.img}"/>
                             </a>
                         </div>
                         <p class="font-normal dark:text-black text-xl leading-5 text-stone-900 md:mt-6 mt-4"><a href="/products/${product.id}">${product.name}</a></p>
@@ -37,15 +40,65 @@ const ProductPage = {
                     `).join("")}    
                 </div>
     
-                <div class="flex justify-center items-center">
-                    <button class="hover:bg-gray-700 dark:text-gray-300 focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 py-5 md:px-16 md:w-auto w-full lg:mt-28 md:mt-12 mt-10 text-white font-medium text-base leading-4">Xem thêm</button>
-                </div>
+                
+            <div class="max-w-8xl mx-auto container py-10">
+            <ul class="flex justify-center items-center">
+                <li>
+                    <span tabindex="0" aria-label="backward" role="button" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none p-1 flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 focus:outline-none mr-1 sm:mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <polyline points="15 6 9 12 15 18" />
+                        </svg>
+                    </span>
+                </li>
+                <li>
+                    <span tabindex="0" class="focus:outline-none focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">1</span>
+                </li>
+                <li>
+                    <span tabindex="0" class="focus:outline-none focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">2</span>
+                </li>
+                <li>
+                    <span tabindex="0" class="focus:outline-none focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white rounded transition duration-150 ease-in-out text-base leading-tight font-bold shadow px-3 py-2 focus:outline-none">...</span>
+                </li>
+                <li>
+                    <span tabindex="0" class="focus:outline-none focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer transition shadow duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">6</span>
+                </li>
+                <li>
+                    <span tabindex="0" class="focus:outline-none focus:bg-indigo-700 focus:text-white flex text-indigo-700 bg-white hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer transition shadow duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">7</span>
+                </li>
+                <li>
+                    <span tabindex="0" aria-label="forward" role="button" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none flex rounded transition duration-150 ease-in-out text-base leading-tight font-bold text-gray-500 hover:text-indigo-700 p-1 focus:outline-none ml-1 sm:ml-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <polyline points="9 6 15 12 9 18" />
+                        </svg>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    
             </div>
         </div>
     </div>
 
             ${Footer.render()}
         `;
+    },
+    afterRender() {
+        // Lấy thông tin từ localStorage
+        // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
+        const email = document.querySelector("#email");
+        const logout = document.querySelector("#logout");
+        if (email) {
+            email.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                reRender(Header, "#header");
+                toastr.success("Logout thành công");
+            });
+        }
     },
 };
 export default ProductPage;

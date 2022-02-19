@@ -25,14 +25,14 @@
     }
   ],
   "cateProducts": [
-    { "id": "1", "name": "Ship"},
-    { "id": "2", "name": "Tank"}
+    { "id": "1", "name": "Tàu chiến"},
+    { "id": "2", "name": "Xe tăng"}
   ],
   "products": [
     {
       "id": "1",
       "name": "Tàu sân bay Liaoning CV-16",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "img": "https://cdn11.bigcommerce.com/s-2vi95liat8/images/stencil/1280x1280/products/2274/21162/P056-S_1__30752.1600475561.jpg?c=2",
       "product_code": "P056-S",
       "steel_size": "11*21",
       "thickness": "0.2",
@@ -40,12 +40,12 @@
       "number_plates": "2",
       "difficult": "5/7",
       "price": "100",
-      "cateProducts": "1"
+      "cateProductId": "1"
     },
     {
       "id": "2",
       "name": "Tàu sân bay USS Enterprise CVN-65",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "img": "https://cdn01.pinkoi.com/product/UVXhZ9Qd/0/2/640x530.jpg",
       "product_code": "P083-S",
       "steel_size": "11*21",
       "thickness": "0.2",
@@ -53,12 +53,12 @@
       "number_plates": "2",
       "difficult": "5/7",
       "price": "200",
-      "cateProducts": "1"
+      "cateProductId": "1"
     },
     {
       "id": "3",
       "name": "Tàu sân bay Varyag",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "img": "https://cf.shopee.vn/file/28af39d60dac78166b74619314e0f8a9",
       "product_code": "P056-KSR",
       "steel_size": "11*21",
       "thickness": "0.2",
@@ -66,20 +66,72 @@
       "number_plates": "2",
       "difficult": "5/7",
       "price": "300",
-      "cateProducts": "1"
+      "cateProductId": "1"
     },
     {
       "id": "4",
       "name": "Thiết giáp hạm Bismarck",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
+      "img": "https://ae01.alicdn.com/kf/HTB1TH4gKXmWBuNjSspdq6zugXXah/MMZ-MODEL-Piececool-3D-metal-puzzle-Bismarck-Battleship-Military-Assembly-metal-Model-kit-DIY-3D-Laser.jpg_Q90.jpg_.webp",
       "product_code": "P084-S",
       "steel_size": "11*21",
       "thickness": "0.2",
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "400",
-      "cateProducts": "1"
+      "price": "320.000 đ",
+      "cateProductId": "1"
+    },
+    {
+      "id": "5",
+      "name": "Xe tank chủ lực thế hệ 3 T-99A",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/12/1569035706485147-510x510.jpg",
+      "product_code": "P137-NSK",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": " 18.5 x 6.5 x 7 cm",
+      "number_plates": "3",
+      "difficult": "4/7",
+      "price": "100",
+      "cateProductId": "2"
+    },
+    {
+      "id": "6",
+      "name":"Xe chiến đấu hộ vệ xe tăng BMPT-72",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/04/HTB1OJUIhMoQMeJjy0Foq6AShVXa7-510x510.jpg",
+      "product_code": "P051-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "10.3 x 5 x 4.8 ",
+      "number_plates": "2",
+      "difficult": "5/7",
+      "price": "260.000 đ",
+      "cateProductId": "2"
+    },
+    {
+      "id": "7",
+      "name": "xe tăng HALO - UNSC SCORPION",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2018/09/0008795_halo-unsc-scorpion-1-510x510.jpeg",
+      "product_code": "TMB082",
+      "steel_size": "11*11",
+      "thickness": "0.2",
+      "product_size": "6.6*4.6*2.8",
+      "number_plates": "2",
+      "difficult": "2/7",
+      "price": "100",
+      "cateProductId": "2"
+    },
+    {
+      "id": "8",
+      "name": "Xe tăng T90",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/03/5-8.jpg",
+      "product_code": " P047-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "12.4 x 5 x 3",
+      "number_plates": "2",
+      "difficult": "5/7",
+      "price": "100",
+      "cateProductId": "1"
     }
   ]
 }

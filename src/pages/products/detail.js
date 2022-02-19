@@ -13,13 +13,12 @@ const ProductDetailPage = {
         <div class="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
             <div class="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
                 <a href="" >
-                <img class="w-full" alt="image of a girl posing" src="${product.img}" />
-                <img class="mt-6 w-full" alt="image of a girl posing" src="${product.img}" />
+                <img class="w-full" alt="" src="${product.img}" />
                 </a>
             </div> 
             <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                 <div class="border-b border-gray-200 pb-6">
-                    <p class="text-sm leading-none text-gray-900 dark:text-gray-600 ">Balenciaga Fall Collection</p>
+                    <p class="text-sm leading-none text-gray-900 dark:text-gray-600 ">${product.cateProductId}</p>
                     <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-900 dark:text-gray-600 mt-2">${product.name}</h1>
                 </div>
                 <div>
@@ -40,7 +39,7 @@ const ProductDetailPage = {
                         </div>
                     </div>
                     <hr class="bg-gray-200 w-full my-2" />
-                    <button data-id="${product.id}" id="btnAddToCart" class="dark:text-gray-400 dark:text-gray-900 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-900 w-full py-4 hover:bg-gray-700 focus:outline-none">
+                    <button data-id="${product.id}" id="btnAddToCart" class="dark:text-gray-400 dark:text-gray-900 hover:text-teal-500 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-900 w-full py-4 hover:bg-gray-700 focus:outline-none">
                         Add to cart
                     </button>
                 <div> 
