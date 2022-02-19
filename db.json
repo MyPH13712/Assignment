@@ -26,7 +26,8 @@
   ],
   "cateProducts": [
     { "id": "1", "name": "Tàu chiến"},
-    { "id": "2", "name": "Xe tăng"}
+    { "id": "2", "name": "Xe tăng"},
+    { "id": "3", "name": "Động vật"}
   ],
   "products": [
     {
@@ -124,14 +125,67 @@
       "id": "8",
       "name": "Xe tăng T90",
       "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/03/5-8.jpg",
-      "product_code": " P047-S",
+      "product_code": "P047-S",
       "steel_size": "11*21",
       "thickness": "0.2",
       "product_size": "12.4 x 5 x 3",
       "number_plates": "2",
       "difficult": "5/7",
       "price": "100",
-      "cateProductId": "1"
+      "cateProductId": "2"
+    },
+    {
+      "id": "9",
+      "name": "Con Công",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/03/5-8.jpg",
+      "product_code": "P102-NGB",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "13.9 x 8.5 x 23 ",
+      "number_plates": " 3,5",
+      "difficult": "4/7",
+      "price": "100",
+      "cateProductId": "3"
+    },
+    {
+      "id": "10",
+      "name": "Khủng long ba sừng Triceratops",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/04/7-1-1.jpg",
+      "product_code": "P062-S",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "19.5 x 7 x 7",
+      "number_plates": "3  & 1/4",
+      "difficult": "6/7",
+      "price": "100",
+      "cateProductId": "3"
+    },
+    {
+      "id": "11",
+      "name": "Lân Đỏ Red Dancing Lion ",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2020/03/mo-hinh-kim-loai-3d-lap-rap-piececool-lan-do-red-dancing-lion-mp830-2-743x1024.jpg",
+      "product_code": " P142-GKN",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "11 x 10.5 x 14.5",
+      "number_plates": " 4",
+      "difficult": "3/7",
+      "price": "100",
+      "cateProductId": "3"
+    },
+    {
+      "id": "12",
+      "name": "Rồng Đen The Black Dragon",
+      "img": "https://mohinhlaprap3d.com/wp-content/uploads/2020/03/HTB13.cUafWG3KVjSZFPq6xaiXXaf-613x1024.jpg",
+      "product_code": "P119-KRS",
+      "steel_size": "11*21",
+      "thickness": "0.2",
+      "product_size": "23.5 x 21 x 13",
+      "number_plates": "3",
+      "difficult": "5/7",
+      "price": "100",
+      "cateProductId": "3"
     }
+    
   ]
 }
