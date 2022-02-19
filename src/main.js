@@ -1,6 +1,6 @@
 import Navigo from "navigo";
 import HomePage from "./pages/home";
-import AboutPage from "./pages/about";
+
 import ProductPage from "./pages/products";
 import ProductDetailPage from "./pages/products/detail";
 import FilterPage from "./pages/products/filter";
@@ -43,9 +43,6 @@ router.on("/admin/*", () => {}, {
 router.on({
     "/": () => {
         print(HomePage);
-    },
-    "/about": () => {
-        print(AboutPage);
     },
     "/tutorial": () => {
         print(TutorPage);
