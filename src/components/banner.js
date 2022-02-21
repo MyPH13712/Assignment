@@ -1,42 +1,10 @@
-/* eslint-disable import/no-unresolved */
-import Swiper from "swiper/bundle";
-// eslint-disable-next-line import/no-unresolved
-import "swiper/css/bundle";
-
 const Banner = {
     render() {
         return `
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/1024/400" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/1024/400" />    
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://picsum.photos/1024/400" />    
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+            <div class="banner">
+                <img src="https://product.hstatic.net/1000328919/product/-rap-3d-tau-san-bay-uss-enterprise-cvn-65-_silver_-piececool-mp298__3__4781dfc54ce04a929610e713de81b96a_1024x1024.jpg">
             </div>
         `;
-    },
-    afterRender() {
-        const swiper = new Swiper(".swiper", {
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
     },
 };
 export default Banner;
