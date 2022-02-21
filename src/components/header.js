@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-lone-blocks */
 /* eslint-disable max-len */
 import toastr from "toastr";
@@ -16,24 +17,65 @@ const Header = {
                     <h1 class="flex text-4xl font-bold antialiased"><i>Piece3D</i></h1>                     
                 </div>
                 <ul class="flex float-right content-center">
-                <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
-                <li><a href="/products" class=" px-4 py-5 hover:text-teal-500">Sản phẩm</a></li>
-                <li><a href="/tutorial" class=" px-4 py-5 hover:text-teal-500">Hướng dẫn lắp ráp</a></li>
-                <li><a href="/admin/dashboard" class=" px-4 py-5 hover:text-teal-500">Thống kê</a></li>
-                ${localStorage.getItem("user") ? `
-                    <ul class="flex float-right content-center">
-                        <li><a href="/" class="px-6 py-5 hover:text-teal-500" id="email"></a></li>
-                        <li><a class="px-4 py-5 hover:text-teal-500" id="logout">Đăng xuất</a></li>
+                    <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
+                    
+                    <div class="relative">
+                    <button class="focus:outline-none    bg-white  flex items-center justify-between border rounded  bg-zinc-100 w-40 cursor-pointer" data-menu>
+                        <p class="pl-3 px-4 py-3 hover:text-teal-500 text-sm leading-3 tracking-normal font-normal">Basic Options</p>
+                        <div class="cursor-pointer hover:text-teal-500 mr-3">
+                           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1.svg" alt="Dropdown" class="dark:hidden">
+                           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1.svg" alt="Dropdown" class="hidden transform rotate-180 dark:hidden">
+                           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1darks.svg" alt="Dropdown" class="dark:vlock hidden">
+                           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1darks.svg" alt="Dropdown" class="transform rotate-180 dark:block hidden">
+                        </div>
+                    </button>
+                    <ul id="optionlist" class="visible transition duration-300 opacity-100 bg-white dark:bg-gray-800 shadow rounded mt-2 pb-1 w-48 absolute">
+                        <li class="focus:outline-none focus:underline focus:text-gray-400">
+                        
+                        </li>
+                       
                     </ul>
-                ` : ""}
-            </ul>
+                  
+                  
+                </div>
+            
+                    <li><a href="/tutorial" class=" px-4 py-5 hover:text-teal-500">Hướng dẫn lắp ráp</a></li>
+                    <li><a href="/admin/dashboard" class=" px-4 py-5 hover:text-teal-500">Thống kê</a></li>
+                </ul>
                 <div class="hidden sm:flex flex-row space-x-4">
-                <a href="/cart"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-indigo-700 bg-white border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center">Giỏ hàng</button></a>
-                <a href="/signup"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-indigo-700 bg-white border border-indigo-700 focus:outline-none focus:bg-gray-200 hover:bg-gray-200 duration-150 justify-center items-center" >Đăng kí</button></a>
-                <a href="/signin"><button class="rounded-md flex space-x-2 w-24 h-10 font-normal text-sm leading-3 text-white bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-600 hover:bg-indigo-600 duration-150 justify-center items-center" >Đăng nhập</button></a>
+                <div class="relative">
+                <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 focus:bg-gray-200 hover:bg-gray-200 bg-white dark:bg-gray-800 flex items-center justify-between border rounded border-gray-300 dark:border-gray-700 w-40 cursor-pointer" data-menu>
+                    <p class="pl-3 py-3 text-gray-600 dark:text-gray-400 text-sm leading-3 tracking-normal font-normal">Basic Options</p>
+                    <div class="cursor-pointer text-gray-600 dark:text-gray-400 mr-3">
+                       <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1.svg" alt="Dropdown" class="dark:hidden">
+                       <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1.svg" alt="Dropdown" class="hidden transform rotate-180 dark:hidden">
+                       <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1darks.svg" alt="Dropdown" class="dark:vlock hidden">
+                       <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_with_account_indigo-svg1darks.svg" alt="Dropdown" class="transform rotate-180 dark:block hidden">
+                    </div>
+                </button>
+                <ul id="optionlist" class="visible transition duration-300 opacity-100 bg-white dark:bg-gray-800 shadow rounded mt-2 pb-1 w-48 absolute">
+                    <li class="focus:outline-none focus:underline focus:text-gray-400">
+                    ${localStorage.getItem("user") ? `
+                        <div  class="cursor-pointer rounded-t text-sm flex flex-col font-bold leading-3 tracking-normal pt-4 pb-3 mb-1 bg-indigo-700 text-white px-3">
+                            <span class="font-medium"><a href="/" class="px-4 py-5 hover:text-teal-500" id="email"></a></span>
+                            <span class="font-medium mt-2"><a class="px-4 py-5 hover:text-teal-500" id="logout">Đăng xuất</a></span>
+                        </div>
+                        ` : ""}
+                    </li>
+                    <li>
+                        <ul>
+                           <li> <a href="/signin" class="hover:bg-gray-100 focus:outline-none focus:underline focus:text-gray-400"><div class="cursor-pointer text-gray-600 dark:text-gray-400 text-sm dark:hover:bg-gray-600 dark:hover:text-white leading-3 tracking-normal py-3  hover:bg-gray-100 px-3 font-normal">Đăng nhập</div></a></li>
+                           <li> <a href="/signup" class="hover:bg-gray-100 focus:outline-none focus:underline focus:text-gray-400"><div class="cursor-pointer text-gray-600 dark:text-gray-400 text-sm dark:hover:bg-gray-600 dark:hover:text-white leading-3 tracking-normal py-3 hover:bg-gray-100 px-3 font-normal">Đăng kí</div></a></li>
+                           <li> <a href="/cart" class="hover:bg-gray-100 focus:outline-none focus:underline focus:text-gray-400"><div class="cursor-pointer text-gray-600 dark:text-gray-400 text-sm dark:hover:bg-gray-600 dark:hover:text-white leading-3 tracking-normal py-3 hover:bg-gray-100  px-3 font-normal">Giỏ hàng</div></a></li>
+                        </ul>
+                    </li>
+                </ul>
+              
+              
+            </div>
                 </div>
         </nav>    
-        </div>
+    </div>
         `;
     },
     afterRender() {
@@ -51,8 +93,31 @@ const Header = {
                 toastr.success("Logout thành công");
             });
         }
+        const elements = document.querySelectorAll("[data-menu]");
+        for (let i = 0; i < elements.length; i++) {
+            const main = elements[i];
+            main.addEventListener("click", () => {
+                const element = main.parentElement.parentElement;
+                const andicators = main.querySelectorAll("img");
+                const child = element.querySelector("ul");
+                if (child.classList.contains("opacity-0")) {
+                    child.classList.toggle("invisible");
+                    child.classList.toggle("visible");
+                    andicators[0].style.display = "block";
+                    andicators[1].style.display = "none";
+                } else {
+                    setTimeout(() => {
+                        child.classList.toggle("invisible");
+                        child.classList.toggle("visible");
+                    }, 300);
+                    andicators[0].style.display = "none";
+                    andicators[1].style.display = "block";
+                }
+                child.classList.toggle("opacity-0");
+                child.classList.toggle("opacity-100");
+            });
+        }
     },
-
 };
 export default Header;
 
