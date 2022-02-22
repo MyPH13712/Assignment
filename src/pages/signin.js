@@ -48,6 +48,32 @@ const Signin = {
         `;
     },
     afterRender() {
+        const elements = document.querySelectorAll("[data-menu]");
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < elements.length; i++) {
+            const main = elements[i];
+            main.addEventListener("click", () => {
+                const element = main.parentElement.parentElement;
+                const andicators = main.querySelectorAll("img");
+                const child = element.querySelector("ul");
+                if (child.classList.contains("opacity-0")) {
+                    child.classList.toggle("invisible");
+                    child.classList.toggle("visible");
+                    andicators[0].style.display = "block";
+                    andicators[1].style.display = "none";
+                } else {
+                    setTimeout(() => {
+                        child.classList.toggle("invisible");
+                        child.classList.toggle("visible");
+                    }, 300);
+                    andicators[0].style.display = "none";
+                    andicators[1].style.display = "block";
+                }
+                child.classList.toggle("opacity-0");
+                child.classList.toggle("opacity-100");
+            });
+        }
+
         const formSignin = document.querySelector("#formSignin");
         formSignin.addEventListener("submit", async (e) => {
             e.preventDefault();

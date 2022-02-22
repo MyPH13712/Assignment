@@ -1,11 +1,11 @@
 import toastr from "toastr";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import { getAll } from "../../api/product";
-import { reRender } from "../../utils";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { getAll } from "../api/product";
+import { reRender } from "../utils";
 import "toastr/build/toastr.min.css";
 
-const ProductPage = {
+const CategoryPage = {
     async render() {
         const response = await getAll();
         return /* html */`
@@ -123,4 +123,4 @@ const ProductPage = {
         }
     },
 };
-export default ProductPage;
+export default CategoryPage;

@@ -1,5 +1,8 @@
+import toastr from "toastr";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { reRender } from "../utils";
+import "toastr/build/toastr.min.css";
 
 const TutorPage = {
     render() {
@@ -63,6 +66,47 @@ const TutorPage = {
 
         ${Footer.render()}
         `;
+    },
+    afterRender() {
+        const elements = document.querySelectorAll("[data-menu]");
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < elements.length; i++) {
+            const main = elements[i];
+            main.addEventListener("click", () => {
+                const element = main.parentElement.parentElement;
+                const andicators = main.querySelectorAll("img");
+                const child = element.querySelector("ul");
+                if (child.classList.contains("opacity-0")) {
+                    child.classList.toggle("invisible");
+                    child.classList.toggle("visible");
+                    andicators[0].style.display = "block";
+                    andicators[1].style.display = "none";
+                } else {
+                    setTimeout(() => {
+                        child.classList.toggle("invisible");
+                        child.classList.toggle("visible");
+                    }, 300);
+                    andicators[0].style.display = "none";
+                    andicators[1].style.display = "block";
+                }
+                child.classList.toggle("opacity-0");
+                child.classList.toggle("opacity-100");
+            });
+        }
+        // Lấy thông tin từ localStorage
+        // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
+        const email = document.querySelector("#email");
+        const logout = document.querySelector("#logout");
+        if (email) {
+            email.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                reRender(Header, "#header");
+                toastr.success("Logout thành công");
+            });
+        }
     },
 };
 export default TutorPage;

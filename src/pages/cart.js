@@ -20,7 +20,7 @@ const CartPage = {
                         <p class="text-sm pl-2 leading-none dark:hover:text-gray-200"><a href="/products">Quay lại</a></p>
                     </div>
                     <p class="lg:text-4xl text-2xl font-black  text-gray-800 dark:text-white pt-3">Giỏ hàng</p>
-                    ${cart.map((item) => `
+                    ${cart.map((item) => /* html */`
                     <div class="md:flex items-strech py-8 md:py-10 lg:py-8 border-t border-gray-50">
                         <div class="md:w-4/12 2xl:w-1/4 w-full">
                             <img src="${item.img}" alt="" class="h-full object-center object-cover md:block hidden" />
@@ -29,6 +29,36 @@ const CartPage = {
                             <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">${item.product_code}</p>
                             <div class="flex items-center justify-between w-full pt-1">
                                 <p class="text-base font-black leading-none text-gray-800 dark:text-white">${item.name}</p>
+                                
+            <div class="max-w-8xl mx-auto container py-8">
+            <div class="flex justify-center items-center">
+                <ul class="flex">
+                    <li class="flex flex-col justify-center">
+                        <button role="button" data-id="${item.id}" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700  focus:text-indigo-800 hover:bg-gray-200 hover:text-indigo-700 cursor-pointer flex rounded text-base leading-tight font-bold text-gray-500 p-1 shadow focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <input tabindex="-1" id="page_number" class="w-8 h-8 pl-2 rounded text-indigo-700 text-base mx-2 shadow focus:outline-none placeholder-white"/>
+                    </li>
+                    <li class="flex flex-col justify-center">
+                        <button role="button" data-id="${item.id}" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700  focus:text-indigo-800 hover:bg-gray-200 hover:text-indigo-700 cursor-pointer flex rounded text-base leading-tight font-bold text-gray-500 p-1 shadow focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+          
+          
+        </div>
+    
                                 <button data-id="${item.id}" class="btn btn-increase text-white">+</button>
                             
                                 <button data-id="${item.id}" class="btn btn-decrease text-white">-</button>

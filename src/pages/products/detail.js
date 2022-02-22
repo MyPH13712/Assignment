@@ -39,7 +39,7 @@ const ProductDetailPage = {
                         </div>
                     </div>
                     <hr class="bg-gray-200 w-full my-2" />
-                    <button data-id="${product.id}" id="btnAddToCart" class="dark:text-gray-400 dark:text-gray-900 hover:text-teal-500 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-900 w-full py-4 hover:bg-gray-700 focus:outline-none">
+                    <button data-id="${product.id}" id="btnAddToCart" class="dark:text-gray-400 dark:text-gray-900 hover:text-teal-500 dark:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-500 w-full py-4 hover:bg-gray-700 focus:outline-none">
                         Add to cart
                     </button>
                 <div> 
@@ -51,11 +51,36 @@ const ProductDetailPage = {
     },
 
     afterRender() {
+        const elements = document.querySelectorAll("[data-menu]");
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < elements.length; i++) {
+            const main = elements[i];
+            main.addEventListener("click", () => {
+                const element = main.parentElement.parentElement;
+                const andicators = main.querySelectorAll("img");
+                const child = element.querySelector("ul");
+                if (child.classList.contains("opacity-0")) {
+                    child.classList.toggle("invisible");
+                    child.classList.toggle("visible");
+                    andicators[0].style.display = "block";
+                    andicators[1].style.display = "none";
+                } else {
+                    setTimeout(() => {
+                        child.classList.toggle("invisible");
+                        child.classList.toggle("visible");
+                    }, 300);
+                    andicators[0].style.display = "none";
+                    andicators[1].style.display = "block";
+                }
+                child.classList.toggle("opacity-0");
+                child.classList.toggle("opacity-100");
+            });
+        }
+
         const btnAddToCart = document.querySelector("#btnAddToCart");
         const { id } = btnAddToCart.dataset;
         const inputValue = document.querySelector("#inputValue");
 
-        const elements = document.querySelectorAll("[data-menu]");
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < elements.length; i++) {
             const main = elements[i];

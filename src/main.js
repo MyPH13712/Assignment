@@ -8,7 +8,6 @@ import ContactPage from "./pages/contact";
 import CartPage from "./pages/cart";
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
-import DetailNewsPage from "./pages/detailNews";
 import NotFoundPage from "./pages/notfound";
 import TutorPage from "./pages/tutorial";
 import DashBoardPage from "./pages/admin/dashboard";
@@ -67,10 +66,6 @@ router.on({
     },
     "/signin": () => {
         print(Signin);
-    },
-    "/news/:id": ({ data }) => {
-        const { id } = data;
-        print(DetailNewsPage.render(id));
     },
     "/admin/dashboard": () => {
         print(DashBoardPage);
