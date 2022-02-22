@@ -92,7 +92,7 @@
       "product_size": "20 x 4.7 x 4.8",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "320.000",
+      "price": "320000",
       "cateProductId": "1"
     },
     {
@@ -118,7 +118,7 @@
       "product_size": "10.3 x 5 x 4.8 ",
       "number_plates": "2",
       "difficult": "5/7",
-      "price": "260.000",
+      "price": "260000",
       "cateProductId": "2"
     },
     {
@@ -142,10 +142,9 @@
       "steel_size": "11*21",
       "thickness": "0.2",
       "product_size": "12.4 x 5 x 3",
-      "number_plates": "2",
+      "number_plates": "5",
       "difficult": "5/7",
-      "price": "100",
-      "cateProductId": "2"
+      "price": "500000"
     },
     {
       "id": "9",
