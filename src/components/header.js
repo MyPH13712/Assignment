@@ -14,7 +14,7 @@ const Header = {
             <div class="flex justify-between "> 
                 
                 <div class=" flex space-x-3 items-center">
-                    <h1 class="flex text-4xl font-bold antialiased"><i>Piece3D</i></h1>                     
+                <a href="/"><h1 class="flex text-4xl font-bold antialiased"><i>Piece3D</i></h1></a>                 
                 </div>
                 <ul class="flex float-right content-center">
                     <li><a href="/" class=" px-4 py-5 hover:text-teal-500">Trang chủ</a></li>
@@ -41,6 +41,12 @@ const Header = {
                     
                     <li><a href="/tutorial" class=" px-4 py-5 hover:text-teal-500">Hướng dẫn lắp ráp</a></li>
                     <li><a href="/admin/dashboard" class=" px-4 py-5 hover:text-teal-500">Thống kê</a></li>
+                    ${localStorage.getItem("user") ? `
+                    <ul class="flex">
+                      <li class="flex items-center"><a href="/" class=" px-2 py-1 hover:text-teal-500" id="email"></a></li>
+                      <li class="flex items-center"><a class=" px-4 py-1 hover:text-teal-500" id="logout">Logout</a></li>
+                    </ul>
+                  ` : ""}
                 </ul>
                 <div class="hidden sm:flex flex-row space-x-4">
                     <div class="relative">

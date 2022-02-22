@@ -2,9 +2,15 @@
   "posts": [
     {
       "id": "23",
-      "title": "ggggggggggg updated",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644489405/pn2qgxuqgjpav6fx2l1y.png",
-      "desc": "ahihihihi"
+      "title": "ggggggggggg 11111",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645497102/vsdojfh7vnhjakxn7aj3.png",
+      "desc": "ahahhaahaha"
+    },
+    {
+      "title": "",
+      "img": "",
+      "desc": "",
+      "id": "70bNJ88"
     }
   ],
   "users": [
@@ -25,9 +31,18 @@
     }
   ],
   "cateProducts": [
-    { "id": "1", "name": "Tàu chiến"},
-    { "id": "2", "name": "Xe tăng"},
-    { "id": "3", "name": "Động vật"}
+    {
+      "id": "1",
+      "name": "Tàu chiến"
+    },
+    {
+      "id": "2",
+      "name": "Xe tăng"
+    },
+    {
+      "id": "3",
+      "name": "Động vật"
+    }
   ],
   "products": [
     {
@@ -97,7 +112,7 @@
     },
     {
       "id": "6",
-      "name":"Xe chiến đấu hộ vệ xe tăng BMPT-72",
+      "name": "Xe chiến đấu hộ vệ xe tăng BMPT-72",
       "img": "https://mohinhlaprap3d.com/wp-content/uploads/2019/04/HTB1OJUIhMoQMeJjy0Foq6AShVXa7-510x510.jpg",
       "product_code": "P051-S",
       "steel_size": "11*21",
@@ -186,6 +201,5 @@
       "price": "100",
       "cateProductId": "3"
     }
-    
   ]
 }

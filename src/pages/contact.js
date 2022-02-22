@@ -1,5 +1,8 @@
+import toastr from "toastr";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { reRender } from "../utils";
+import "toastr/build/toastr.min.css";
 
 const ContactPage = {
     render() {
@@ -8,7 +11,6 @@ const ContactPage = {
         <div class="max-w-5xl mx-auto">
                                        
         <div class="py-4 lg:py-8 relative">
-        <img src="https://cdn.tuk.dev/assets/templates/radian/Back_Image.png" class="h-2/5 lg:h-full w-full lg:w-1/2 absolute inset-0 object-cover object-center xl:block hidden" alt="map" />
         <div class="xl:mx-auto xl:container relative">
             <div class="flex flex-wrap xl:mx-auto xl:container">
                 <div class="w-full relative lg:w-1/2 xl:mt-10 mb-10 2xl:pr-24 2xl:pl-0 xl:pl-12 pl-0">
@@ -63,6 +65,48 @@ const ContactPage = {
         </div>
         ${Footer.render()}
         `;
+    },
+    afterRender() {
+        const elements = document.querySelectorAll("[data-menu]");
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < elements.length; i++) {
+            const main = elements[i];
+            main.addEventListener("click", () => {
+                const element = main.parentElement.parentElement;
+                const andicators = main.querySelectorAll("img");
+                const child = element.querySelector("ul");
+                if (child.classList.contains("opacity-0")) {
+                    child.classList.toggle("invisible");
+                    child.classList.toggle("visible");
+                    andicators[0].style.display = "block";
+                    andicators[1].style.display = "none";
+                } else {
+                    setTimeout(() => {
+                        child.classList.toggle("invisible");
+                        child.classList.toggle("visible");
+                    }, 300);
+                    andicators[0].style.display = "none";
+                    andicators[1].style.display = "block";
+                }
+                child.classList.toggle("opacity-0");
+                child.classList.toggle("opacity-100");
+            });
+        }
+
+        // Lấy thông tin từ localStorage
+        // Sử dụng JSON.parse để chuyển đổi chuỗi sang object
+        const email = document.querySelector("#email");
+        const logout = document.querySelector("#logout");
+        if (email) {
+            email.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                reRender(Header, "#header");
+                toastr.success("Logout thành công");
+            });
+        }
     },
 };
 export default ContactPage;
