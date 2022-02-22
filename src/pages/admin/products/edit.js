@@ -1,6 +1,6 @@
 import axios from "axios";
 import NavAdmin from "../../../components/NavAdmin";
-import { update, get } from "../../../api/posts";
+import { update, get } from "../../../api/product";
 
 const AdminEditProduct = {
     async render(id) {
