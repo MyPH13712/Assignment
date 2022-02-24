@@ -19,11 +19,11 @@ const AdminEditposts = {
         <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="mt-5 md:mt-0 md:col-span-2">
-          <form id="formEditPro">
+          <form id="formEditPost">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
               <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
               <div class="mt-1">
-                  <label  class="block text-sm font-medium text-gray-700">Tên sản phẩm</label>
+                  <label  class="block text-sm font-medium text-gray-700">Tên bài viết</label>
                   <input type="text" id="title-post" placeholder="Title Post" value="${data.title}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 px-3 py-3 block w-full shadow-sm sm:text-sm border-gray-300">
                 </div>
                 <div>
@@ -39,7 +39,7 @@ const AdminEditposts = {
                 </div>
                 <div>
                 <div class="mt-1">
-                  <label class="block text-sm font-medium text-gray-700">Mã Sp</label>
+                  <label class="block text-sm font-medium text-gray-700">Mô tả</label>
                   <textarea id="desc-post" cols="30" rows="10" class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">${data.desc}</textarea>
                 </div>
             </div>
@@ -97,6 +97,7 @@ const AdminEditposts = {
                 img: imgLink || imgPreview.src,
                 desc: document.querySelector("#desc-post").value,
             });
+            document.location.href = "/admin/posts";
         });
     },
 };

@@ -1,22 +1,57 @@
 import axios from "axios";
 import $ from "jquery";
+import NavAdmin from "../../../components/NavAdmin";
 import { add } from "../../../api/posts";
 
 const AdminAddPosts = {
     async render() {
-        return `
-            <div class="max-w-5xl mx-auto">
-                
-                <div class="news">
-                    <form id="formAddPost">
-                        <input type="text" class="border border-black" id="title-post" name="title-post" placeholder="Title Post"/><br />
-                        <input type="file" class="border border-black" id="img-post" /> <br />
-                        <img width="200" src="https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg" id="img-preview"/>
-                        <textarea name="" class="border border-black" id="desc-post" cols="30" rows="10"></textarea> <br />
-                        <button class="bg-blue-500 inline-block px-3 py-4">Add post</button>
-                    </form>
-                </div>
+        return /* html */`
+        <div class="min-h-full">
+        ${NavAdmin.render()}
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900">
+                    Thêm mới bài viết 
+                </h1>
             </div>
+        </header>
+        <main>
+        <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="mt-5 md:mt-0 md:col-span-2">
+          <form id="formAddPost">
+            <div class="shadow sm:rounded-md sm:overflow-hidden">
+              <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+              <div class="mt-1">
+                  <label  class="block text-sm font-medium text-gray-700">Tên bài viết</label>
+                  <input type="text" id="title-post" name="title-post" placeholder="Title Post" class="mt-1 focus:ring-indigo-500  px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"> Ảnh </label>
+                  <input type="file" id="img-post" class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 ">
+                  <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                    <div class="space-y-1 text-center">
+                      <div class="mt-1">
+                      <img width="200" src="https://thumbs.dreamstime.com/b/no-thumbnail-image-placeholder-forums-blogs-websites-148010362.jpg" id="img-preview"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                <div class="mt-1">
+                  <label class="block text-sm font-medium text-gray-700">Mô tả</label>
+                  <textarea type="text" id="desc-post" cols="30" rows="10" class="mt-1 focus:ring-indigo-500 px-3 py-3 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 "></textarea>
+                </div>
+                
+              </div>
+              <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
         `;
     },
     afterRender() {
