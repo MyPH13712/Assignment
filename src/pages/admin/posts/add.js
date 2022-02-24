@@ -111,6 +111,7 @@ const AdminAddPosts = {
                 handleAddPost();
             },
         });
+        document.location.href = "/admin/posts";
     },
 };
 export default AdminAddPosts;
