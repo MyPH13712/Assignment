@@ -73,7 +73,7 @@ const AdminPosts = {
                             </td>
                             <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
                               <a href="/admin/posts/${post.id}/edit" class="text-indigo-600 hover:text-indigo-900">Sửa</a>
-                              <button data-id="${post.id}" class="inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 mx-4 rounded">Xóa</button>
+                              <button data-id="${post.id}" class="btn inline-block bg-indigo-500 hover:bg-indigo-800 text-white text-sm py-2 px-6 mx-4 rounded">Xóa</button>
                             </td>
                           </tr>
                           `).join("")}
